@@ -1,71 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAM</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
 
-<style>
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: center;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
 
-html,body{
-margin:0;
-height:100%;
-background:black;
-}
+    .catalogo-link {
+      position: fixed;
+      left: 50%;
+      bottom: 58px;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: block;
+      line-height: 0;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
 
-.bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+    .catalogo-img {
+      display: block;
+      width: 220px;
+      height: auto;
+      background: transparent;
+      border: 0;
+      outline: none;
+      box-shadow: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: auto;
+    }
 
-object-fit:contain;
-object-position:center;
+    @media (max-width: 900px) {
+      .catalogo-link {
+        bottom: 42px;
+      }
 
-}
+      .catalogo-img {
+        width: 190px;
+      }
+    }
 
-.overlay{
-position:relative;
-height:100%;
-display:flex;
-justify-content:center;
-align-items:flex-end;
-padding-bottom:120px;
-}
+    @media (max-width: 640px) {
+      .catalogo-link {
+        bottom: 34px;
+      }
 
-.catalogo{
-width:300px;
-height:140px;
-background-image:url("assets/BtnCatalogo.png");
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-border:none;
-cursor:pointer;
-}
-
-.catalogo:hover{
-background-image:url("assets/BtnCatalogoSobre.png");
-}
-
-.catalogo:active{
-background-image:url("assets/BtnCatalogoPress.png");
-}
-
-</style>
-
+      .catalogo-img {
+        width: 170px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <img class="bg" src="assets/Fondo de pantalla web.png" alt="Fondo de pantalla web">
 
-<img class="bg" src="assets/Fondo de pantalla web.png">
+  <a class="catalogo-link" href="catalogoTest.html" aria-label="Ir al catálogo">
+    <img
+      id="catalogoBtn"
+      class="catalogo-img"
+      src="assets/BtnCatalogo.png"
+      alt="Catálogo"
+    >
+  </a>
 
-<div class="overlay">
-<a href="catalogoTest.html">
-<button class="catalogo"></button>
-</a>
-</div>
+  <script>
+    (function () {
+      const btn = document.getElementById('catalogoBtn');
+      const normal = 'assets/BtnCatalogo.png';
+      const hover = 'assets/BtnCatalogoSobre.png';
+      const press = 'assets/BtnCatalogoPress.png';
 
+      btn.addEventListener('mouseenter', function () {
+        btn.src = hover;
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        btn.src = normal;
+      });
+
+      btn.addEventListener('mousedown', function () {
+        btn.src = press;
+      });
+
+      btn.addEventListener('mouseup', function () {
+        btn.src = hover;
+      });
+
+      btn.addEventListener('touchstart', function () {
+        btn.src = press;
+      }, { passive: true });
+
+      btn.addEventListener('touchend', function () {
+        btn.src = normal;
+      }, { passive: true });
+
+      btn.addEventListener('touchcancel', function () {
+        btn.src = normal;
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
