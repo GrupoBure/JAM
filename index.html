@@ -11,23 +11,25 @@ margin:0;
 padding:0;
 height:100%;
 background:#000;
-font-family:Arial, Helvetica, sans-serif;
 overflow:hidden;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-/* VIDEO */
-.video-bg{
+/* VIDEO FONDO */
+video{
 position:fixed;
 top:50%;
 left:50%;
 min-width:100%;
 min-height:100%;
+width:auto;
+height:auto;
 transform:translate(-50%,-50%);
 object-fit:cover;
 z-index:1;
 }
 
-/* LOGO */
+/* LOGO CENTRADO */
 .logo{
 position:fixed;
 top:50%;
@@ -38,11 +40,11 @@ text-align:center;
 }
 
 .logo img{
-width:min(420px,70vw);
+width:min(700px,80vw);
 height:auto;
 }
 
-/* overlay suave para contraste */
+/* oscurecer un poco el video para contraste */
 .overlay{
 position:fixed;
 inset:0;
@@ -54,7 +56,7 @@ z-index:1;
 
 <body>
 
-<video class="video-bg" autoplay muted loop playsinline>
+<video autoplay muted loop playsinline>
 <source src="assets/JAM.mp4" type="video/mp4">
 </video>
 
