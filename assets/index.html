@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAM - Jabón Artesanal Mexicano</title>
+
+<style>
+html,body{
+margin:0;
+padding:0;
+height:100%;
+background:#000;
+font-family:Arial, Helvetica, sans-serif;
+overflow:hidden;
+}
+
+/* VIDEO */
+.video-bg{
+position:fixed;
+top:50%;
+left:50%;
+min-width:100%;
+min-height:100%;
+transform:translate(-50%,-50%);
+object-fit:cover;
+z-index:1;
+}
+
+/* LOGO */
+.logo{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:2;
+text-align:center;
+}
+
+.logo img{
+width:min(420px,70vw);
+height:auto;
+}
+
+/* overlay suave para contraste */
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.25);
+z-index:1;
+}
+</style>
+</head>
+
+<body>
+
+<video class="video-bg" autoplay muted loop playsinline>
+<source src="assets/JAM.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="logo">
+<img src="assets/logo.png" alt="JAM - Jabón Artesanal Mexicano">
+</div>
+
+</body>
+</html>
