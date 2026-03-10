@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAM</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #000;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      z-index: 0;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: clamp(48px, 10vh, 110px);
+    }
+
+    .catalogo-link {
+      display: inline-block;
+      text-decoration: none;
+      line-height: 0;
+    }
+
+    .catalogo-btn {
+      width: min(320px, 38vw);
+      min-width: 180px;
+      aspect-ratio: 596 / 278;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      display: block;
+      background-color: transparent;
+      background-image: url("assets/BtnCatalogo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 0.08s ease, filter 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .catalogo-btn:hover {
+      background-image: url("assets/BtnCatalogoSobre.png");
+      transform: translateY(-1px);
+    }
+
+    .catalogo-btn:active {
+      background-image: url("assets/BtnCatalogoPress.png");
+      transform: translateY(2px) scale(0.985);
+    }
+
+    .catalogo-btn:focus-visible {
+      border-radius: 16px;
+      box-shadow: 0 0 0 4px rgba(255, 170, 60, 0.35);
+    }
+
+    @media (max-width: 900px) {
+      .overlay {
+        padding-bottom: clamp(34px, 8vh, 72px);
+      }
+
+      .catalogo-btn {
+        width: min(300px, 52vw);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .overlay {
+        padding-bottom: clamp(24px, 6vh, 48px);
+      }
+
+      .catalogo-btn {
+        width: min(260px, 62vw);
+        min-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="bg" src="assets/Fondo de pantalla web.webp" alt="Fondo Miyotl" />
+
+  <main class="overlay">
+    <a class="catalogo-link" href="catalogoTest.html" aria-label="Ir al catálogo">
+      <button class="catalogo-btn" type="button" aria-hidden="true"></button>
+    </a>
+  </main>
+</body>
+</html>
