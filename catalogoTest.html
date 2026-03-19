@@ -43,9 +43,21 @@
     }
     .tabs{
       display:flex;
-      flex-wrap:wrap;
+      flex-wrap:nowrap;
+      overflow-x:auto;
+      overflow-y:hidden;
       gap:10px;
       margin:18px 0 0;
+      padding-bottom:6px;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:thin;
+    }
+    .tabs::-webkit-scrollbar{
+      height:6px;
+    }
+    .tabs::-webkit-scrollbar-thumb{
+      background:#d2d2d2;
+      border-radius:999px;
     }
     .tab-btn{
       border:1px solid var(--line);
@@ -57,6 +69,8 @@
       line-height:1;
       cursor:pointer;
       transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+      white-space:nowrap;
+      flex:0 0 auto;
     }
     .tab-btn:hover{
       transform:translateY(-1px);
