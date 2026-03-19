@@ -41,39 +41,52 @@
       color:var(--muted);
       font-size:14px;
     }
+    .catalog-layout{
+      display:grid;
+      grid-template-columns:220px minmax(0,1fr);
+      gap:24px;
+      align-items:start;
+    }
+    .sidebar{
+      position:sticky;
+      top:24px;
+      align-self:start;
+    }
+    .sidebar-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    .sidebar-title{
+      margin:0 0 12px;
+      font-size:14px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
     .tabs{
       display:flex;
-      flex-wrap:nowrap;
-      overflow-x:auto;
-      overflow-y:hidden;
+      flex-direction:column;
       gap:10px;
-      margin:18px 0 0;
-      padding-bottom:6px;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:thin;
-    }
-    .tabs::-webkit-scrollbar{
-      height:6px;
-    }
-    .tabs::-webkit-scrollbar-thumb{
-      background:#d2d2d2;
-      border-radius:999px;
     }
     .tab-btn{
+      width:100%;
+      text-align:left;
       border:1px solid var(--line);
       background:#fff;
       color:var(--text);
-      padding:10px 16px;
-      border-radius:999px;
+      padding:12px 14px;
+      border-radius:14px;
       font-size:14px;
-      line-height:1;
+      line-height:1.2;
       cursor:pointer;
       transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
-      white-space:nowrap;
-      flex:0 0 auto;
+      white-space:normal;
     }
     .tab-btn:hover{
-      transform:translateY(-1px);
+      transform:translateX(2px);
       border-color:#d4d4d4;
     }
     .tab-btn.active{
@@ -236,10 +249,38 @@
       font-size:20px;
     }
 
+    @media (max-width:900px){
+      .catalog-layout{
+        grid-template-columns:1fr;
+      }
+      .sidebar{
+        position:static;
+      }
+      .sidebar-box{
+        padding:12px;
+      }
+      .tabs{
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:8px;
+      }
+      .tab-btn{
+        width:auto;
+        text-align:center;
+        white-space:nowrap;
+        border-radius:999px;
+        padding:10px 14px;
+      }
+      .tab-btn:hover{
+        transform:translateY(-1px);
+      }
+    }
+
     @media (max-width:700px){
       .page{padding:18px 12px 28px}
       .card-body{padding:14px}
       .name{font-size:18px}
+      .sidebar-box{padding:10px}
       .tabs{gap:8px}
       .tab-btn{padding:9px 14px;font-size:13px}
       .modal-content{grid-template-columns:1fr}
@@ -253,11 +294,21 @@
     <header class="catalog-header">
       <h1 class="catalog-title">Catálogo</h1>
       <p class="catalog-subtitle">Haz clic en un producto para ver la descripción.</p>
-      <nav id="tabs" class="tabs" aria-label="Filtros por categoría"></nav>
     </header>
 
-    <section id="grid" class="grid"></section>
-    <div id="empty" class="empty"></div>
+    <div class="catalog-layout">
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h2 class="sidebar-title">Categorías</h2>
+          <nav id="tabs" class="tabs" aria-label="Filtros por categoría"></nav>
+        </div>
+      </aside>
+
+      <section>
+        <section id="grid" class="grid"></section>
+        <div id="empty" class="empty"></div>
+      </section>
+    </div>
   </main>
 
   <div id="modal" class="modal" aria-hidden="true">
