@@ -41,6 +41,32 @@
       color:var(--muted);
       font-size:14px;
     }
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0 0;
+    }
+    .tab-btn{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:14px;
+      line-height:1;
+      cursor:pointer;
+      transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .tab-btn:hover{
+      transform:translateY(-1px);
+      border-color:#d4d4d4;
+    }
+    .tab-btn.active{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -200,6 +226,8 @@
       .page{padding:18px 12px 28px}
       .card-body{padding:14px}
       .name{font-size:18px}
+      .tabs{gap:8px}
+      .tab-btn{padding:9px 14px;font-size:13px}
       .modal-content{grid-template-columns:1fr}
       .modal-image{min-height:240px}
       .modal-title{font-size:24px}
@@ -211,6 +239,7 @@
     <header class="catalog-header">
       <h1 class="catalog-title">Catálogo</h1>
       <p class="catalog-subtitle">Haz clic en un producto para ver la descripción.</p>
+      <nav id="tabs" class="tabs" aria-label="Filtros por categoría"></nav>
     </header>
 
     <section id="grid" class="grid"></section>
@@ -245,6 +274,7 @@
   <script>
     const grid = document.getElementById('grid');
     const empty = document.getElementById('empty');
+    const tabs = document.getElementById('tabs');
     const modal = document.getElementById('modal');
     const modalClose = document.getElementById('modalClose');
     const modalImg = document.getElementById('modalImg');
@@ -252,6 +282,21 @@
     const modalDesc = document.getElementById('modalDesc');
     const modalPrice = document.getElementById('modalPrice');
     const modalPeso = document.getElementById('modalPeso');
+
+    const CATEGORY_ORDER = [
+      'Jabón sólido',
+      'Jabón líquido',
+      'Jabón corporal',
+      'Shampoo',
+      'Halloween',
+      'Navidad',
+      'Pascua',
+      'San valentín',
+      'Decorativos'
+    ];
+
+    let allProducts = [];
+    let currentCategory = 'TODOS';
 
     function money(v){
       if(v === undefined || v === null || v === '') return '';
@@ -316,6 +361,54 @@
 
     function baseFromImagePath(path){
       return path.replace(/\.(webp|png|jpg|jpeg)$/i,'');
+    }
+
+    function slugify(value){
+      return (value || '')
+        .toString()
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ');
+    }
+
+    function canonicalCategory(value){
+      const normalized = slugify(value);
+      if(normalized === 'amor y amistad') return 'San valentín';
+      if(normalized === 'jabon solido') return 'Jabón sólido';
+      if(normalized === 'jabon liquido') return 'Jabón líquido';
+      if(normalized === 'jabon corporal') return 'Jabón corporal';
+      if(normalized === 'san valentin') return 'San valentín';
+      if(normalized === 'navidenos' || normalized === 'navideno' || normalized === 'navidad') return 'Navidad';
+      if(normalized === 'decorativos') return 'Decorativos';
+      if(normalized === 'pascua') return 'Pascua';
+      if(normalized === 'halloween') return 'Halloween';
+      if(normalized === 'shampoo') return 'Shampoo';
+      return (value || '').toString().trim();
+    }
+
+    function categoryRank(value){
+      const category = canonicalCategory(value);
+      const index = CATEGORY_ORDER.indexOf(category);
+      return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+    }
+
+    function codeRank(value){
+      const num = Number(String(value || '').trim());
+      return Number.isFinite(num) ? num : Number.MAX_SAFE_INTEGER;
+    }
+
+    function sortProducts(rows){
+      return [...rows].sort((a, b) => {
+        const categoryDiff = categoryRank(a.categoria) - categoryRank(b.categoria);
+        if(categoryDiff !== 0) return categoryDiff;
+
+        const codeDiff = codeRank(a.codigo) - codeRank(b.codigo);
+        if(codeDiff !== 0) return codeDiff;
+
+        return String(a.nombre || '').localeCompare(String(b.nombre || ''), 'es', { sensitivity:'base' });
+      });
     }
 
     function parseCSV(text){
@@ -456,12 +549,46 @@
 
       if(!rows.length){
         empty.style.display = 'block';
-        empty.innerHTML = 'No se encontraron productos en el CSV.';
+        empty.innerHTML = 'No se encontraron productos en esta categoría.';
         return;
       }
 
       empty.style.display = 'none';
       rows.forEach(row => grid.appendChild(productCard(row)));
+    }
+
+    function updateTabState(){
+      tabs.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === currentCategory);
+      });
+    }
+
+    function getFilteredProducts(){
+      if(currentCategory === 'TODOS') return sortProducts(allProducts);
+      return sortProducts(allProducts.filter(item => canonicalCategory(item.categoria) === currentCategory));
+    }
+
+    function applyFilter(category){
+      currentCategory = category;
+      updateTabState();
+      render(getFilteredProducts());
+    }
+
+    function buildTabs(rows){
+      tabs.innerHTML = '';
+      const available = new Set(rows.map(item => canonicalCategory(item.categoria)).filter(Boolean));
+      const orderedCategories = CATEGORY_ORDER.filter(category => available.has(category));
+      const tabCategories = ['TODOS', ...orderedCategories];
+
+      tabCategories.forEach(category => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tab-btn';
+        btn.dataset.category = category;
+        btn.textContent = category;
+        btn.addEventListener('click', () => applyFilter(category));
+        tabs.appendChild(btn);
+      });
     }
 
     async function loadCSV(){
@@ -489,7 +616,11 @@
     }
 
     loadCSV()
-      .then(render)
+      .then(rows => {
+        allProducts = rows;
+        buildTabs(allProducts);
+        applyFilter('TODOS');
+      })
       .catch(err => {
         console.error(err);
         empty.style.display = 'block';
