@@ -1,16 +1,16 @@
 ﻿codigo,nombre,ingredientes,categoria,cats,etiqueta,beneficios,avisos,contenido,precioPublico,precioPúblico_K,precioMayoreo,precioMayoreo_K,precioDistribuidor,precioDistribuidor_K,Imagen,cantidadArticulos
 1,Abre Caminos,,Jabón sólido,,,,,100 gr,20,,,,,,01.webp,1
 2,Abre Caminos con miel,,Jabón sólido,,,,,100 gr,20,,,,,,02.webp,1
-4,Abre Caminos Menta Coco,,Jabón sólido,,,,,100 gr,20,,,,,,04.webp,1
 3,Abre Caminos Miel y Albahaca,,Jabón sólido,,,,,100 gr,20,,,,,,03.webp,1
+4,Abre Caminos Menta Coco,,Jabón sólido,,,,,100 gr,20,,,,,,04.webp,1
 5,Albahaca,,Jabón sólido,,,,,100 gr,20,,,,,,05.webp,1
 6,Almendras,,Jabón sólido,,,,,100 gr,20,,,,,,06.webp,1
 7,Almendras y avena,,Jabón sólido,,,,,100 gr,20,,,,,,07.webp,1
 8,Aloe Vera,,Jabón sólido,,,,,100 gr,20,,,,,,08.webp,1
-12,Aloe vera con Vitamina E,,Jabón sólido,,,,,100 gr,20,,,,,,12.webp,1
 9,Aloe vera y ácido hialurónico,,Jabón sólido,,,,,100 gr,20,,,,,,09.webp,1
 10,Aloe vera y árnica,,Jabón sólido,,,,,100 gr,20,,,,,,10.webp,1
 11,Aloe vera y miel,,Jabón sólido,,,,,100 gr,20,,,,,,11.webp,1
+12,Aloe vera con Vitamina E,,Jabón sólido,,,,,100 gr,20,,,,,,12.webp,1
 13,Anti acné salicílico y aloe vera,,Jabón sólido,,,,,100 gr,20,,,,,,13.webp,1
 14,Arándanos,,Jabón sólido,,,,,100 gr,20,,,,,,14.webp,1
 15,Árnica,,Jabón sólido,,,,,100 gr,20,,,,,,15.webp,1
@@ -19,9 +19,9 @@
 18,Arroz con aloe vera,,Jabón sólido,,,,,100 gr,20,,,,,,18.webp,1
 19,Arroz exfoliante,,Jabón sólido,,,,,120 gr,25,,,,,,19.webp,1
 20,Arroz Miel y Canela,,Jabón sólido,,,,,100 gr,20,,,,,,20.webp,1
+21,Avena para bebé,,Jabón sólido,,,,,100 gr,20,,,,,,21.webp,1
 22,Avena miel,,Jabón sólido,,,,,100 gr,20,,,,,,22.webp,1
 23,Avena Miel y Arroz,,Jabón sólido,,,,,100 gr,20,,,,,,23.webp,1
-21,Avena para bebé,,Jabón sólido,,,,,100 gr,20,,,,,,21.webp,1
 24,Azúfre,,Jabón sólido,,,,,100 gr,20,,,,,,24.webp,1
 25,Bergamota,,Jabón sólido,,,,,100 gr,20,,,,,,25.webp,1
 26,Bugambilia Eucalipto y Menta,,Jabón sólido,,,,,100 gr,20,,,,,,26.webp,1
@@ -36,12 +36,12 @@
 35,Cítricos,,Jabón sólido,,,,,100 gr,20,,,,,,35.webp,1
 36,Coco,,Jabón sólido,,,,,100 gr,20,,,,,,36.webp,1
 37,Concha nacar,,Jabón sólido,,,,,100 gr,20,,,,,,37.webp,1
+38,Glicerina con Leche,,Jabón sólido,,,,,100 gr,20,,,,,,38.webp,1
 39,Cúrcuma y Miel,,Jabón sólido,,,,,100 gr,20,,,,,,39.webp,1
 40,Durazno,,Jabón sólido,,,,,100 gr,20,,,,,,40.webp,1
 41,"Gengibre con limón, cúrcuma y canela",,Jabón sólido,,,,,100 gr,20,,,,,,41.webp,1
 42,"Gengibre con naranja, cúrcuma y canela",,Jabón sólido,,,,,100 gr,20,,,,,,42.webp,1
 43,Glicerina,,Jabón sólido,,,,,100 gr,20,,,,,,43.webp,1
-38,Glicerina con Leche,,Jabón sólido,,,,,100 gr,20,,,,,,38.webp,1
 44,Lavanda,,Jabón sólido,,,,,100 gr,20,,,,,,44.webp,1
 45,Limón,,Jabón sólido,,,,,100 gr,20,,,,,,45.webp,1
 46,Manzana y canela,,Jabón sólido,,,,,100 gr,20,,,,,,46.webp,1
@@ -55,69 +55,18 @@
 54,Neem con caléndula,,Jabón sólido,,,,,100 gr,20,,,,,,54.webp,1
 55,Nopal,,Jabón sólido,,,,,100 gr,20,,,,,,55.webp,1
 56,Romero,,Jabón sólido,,,,,100 gr,20,,,,,,56.webp,1
+57,Ruda y Albahaca,,Jabón sólido,,,,,100 gr,20,,,,,,57.webp,1
 58,Romero y sándalo,,Jabón sólido,,,,,100 gr,20,,,,,,58.webp,1
 59,"Romero, sándalo y castaña de indias",,Jabón sólido,,,,,100 gr,20,,,,,,59.webp,1
 60,Rosa de Castilla,,Jabón sólido,,,,,100 gr,20,,,,,,60.webp,1
 61,Ruda,,Jabón sólido,,,,,100 gr,20,,,,,,61.webp,1
 62,Ruda Albahaca y Sándalo,,Jabón sólido,,,,,100 ml,20,,,,,,62.webp,1
-57,Ruda y Albahaca,,Jabón sólido,,,,,100 gr,20,,,,,,57.webp,1
 63,Sándalo,,Jabón sólido,,,,,100 gr,20,,,,,,63.webp,1
 64,Tepezcohuite,,Jabón sólido,,,,,100 gr,20,,,,,,64.webp,1
 65,Toronja y romero,,Jabón sólido,,,,,100 gr,20,,,,,,65.webp,1
 66,Vainilla,,Jabón sólido,,,,,100 gr,20,,,,,,66.webp,1
 67,Vino tinto y rosas,,Jabón sólido,,,,,100 gr,20,,,,,,67.webp,1
 68,Vitamina E,,Jabón sólido,,,,,100 gr,20,,,,,,68.webp,1
-137,Almendras,,Jabón líquido,,,,,1000 ml,45,,,,,,137.webp,1
-138,Aloe vera,,Jabón líquido,,,,,1000 ml,45,,,,,,138.webp,1
-139,Árnica,,Jabón líquido,,,,,1000 ml,45,,,,,,139.webp,1
-140,Avena,,Jabón líquido,,,,,1000 ml,45,,,,,,140.webp,1
-141,Avena Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,141.webp,1
-142,Canela Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,142.webp,1
-143,Chocolate,,Jabón líquido,,,,,1000 ml,45,,,,,,143.webp,1
-144,Coco,,Jabón líquido,,,,,1000 ml,45,,,,,,144.webp,1
-145,Coco con miel,,Jabón líquido,,,,,1000 ml,45,,,,,,145.webp,1
-146,Frutos rojos,,Jabón líquido,,,,,1000 ml,45,,,,,,146.webp,1
-147,Limón,,Jabón líquido,,,,,1000 ml,45,,,,,,147.webp,1
-148,Manzanilla,,Jabón líquido,,,,,1000 ml,45,,,,,,148.webp,1
-149,Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,149.webp,1
-152,Romero,,Jabón líquido,,,,,1000 ml,45,,,,,,152.webp,1
-151,Rosa de Castilla,,Jabón líquido,,,,,1000 ml,45,,,,,,151.webp,1
-153,Té verde y Menta,,Jabón líquido,,,,,1000 ml,45,,,,,,153.webp,1
-154,Vainilla,,Jabón líquido,,,,,1000 ml,45,,,,,,154.webp,1
-155,Vitamina E,,Jabón líquido,,,,,1000 ml,45,,,,,,155.webp,1
-105,Abre caminos,,Jabón corporal,,,,,1000 ml,45,,,,,,105.webp,1
-106,Almendras,,Jabón corporal,,,,,1000 ml,45,,,,,,106.webp,1
-107,Aloe Vera,,Jabón corporal,,,,,1000 ml,45,,,,,,107.webp,1
-108,Arandanos,,Jabón corporal,,,,,1000 ml,45,,,,,,108.webp,1
-109,Árnica,,Jabón corporal,,,,,1000 ml,45,,,,,,109.webp,1
-110,Arroz  ,,Jabón corporal,,,,,1000 ml,45,,,,,,110.webp,1
-111,Arroz  Miel,,Jabón corporal,,,,,1000 ml,45,,,,,,111.webp,1
-113,Avena miel,,Jabón corporal,,,,,1000 ml,45,,,,,,113.webp,1
-112,Avena para bebé,,Jabón corporal,,,,,1000 ml,45,,,,,,112.webp,1
-114,Café,,Jabón corporal,,,,,1000 ml,45,,,,,,114.webp,1
-116,Chocolate,,Jabón corporal,,,,,1000 ml,45,,,,,,116.webp,1
-115,Cítricos,,Jabón corporal,,,,,1000 ml,45,,,,,,115.webp,1
-117,Coco,,Jabón corporal,,,,,1000 ml,45,,,,,,117.webp,1
-118,Coco con miel,,Jabón corporal,,,,,1000 ml,45,,,,,,118.webp,1
-26,Eucalipto con Bugambilia y Menta,,Jabón corporal,,,,,1000 ml,20,,,,,,26.webp,1
-119,Frutos rojos,,Jabón corporal,,,,,1000 ml,45,,,,,,119.webp,1
-120,"gengibre con limón, cúrcuma y canela",,Jabón corporal,,,,,1000 ml,45,,,,,,120.webp,1
-121,"gengibre con naranja, cúrcuma y canela",,Jabón corporal,,,,,1000 gr,45,,,,,,121.webp,1
-122,Lavanda,,Jabón corporal,,,,,1000 ml,45,,,,,,122.webp,1
-123,Limón,,Jabón corporal,,,,,1000 ml,45,,,,,,123.webp,1
-124,Manzanilla,,Jabón corporal,,,,,1000 ml,45,,,,,,124.webp,1
-125,Menta,,Jabón corporal,,,,,1000 ml,45,,,,,,125.webp,1
-126,"Menta, bugambilia y Eucalipto",,Jabón corporal,,,,,1000 ml,45,,,,,,126.webp,1
-127,Miel,,Jabón corporal,,,,,1000 ml,45,,,,,,127.webp,1
-128,Miel Canela,,Jabón corporal,,,,,1000 ml,45,,,,,,128.webp,1
-129,Neem con caléndula,,Jabón corporal,,,,,1000 ml,45,,,,,,129.webp,1
-131,Romero,,Jabón corporal,,,,,1000 ml,45,,,,,,131.webp,1
-130,Rosa de Castilla,,Jabón corporal,,,,,1000 ml,45,,,,,,130.webp,1
-132,Té verde y Menta,,Jabón corporal,,,,,1000 ml,45,,,,,,132.webp,1
-133,Toronja y romero,,Jabón corporal,,,,,1000 ml,45,,,,,,133.webp,1
-134,Vainilla,,Jabón corporal,,,,,1000 ml,45,,,,,,134.webp,1
-135,Vino tinto y rosas,,Jabón corporal,,,,,1000 ml,45,,,,,,135.webp,1
-136,Vitamina E,,Jabón corporal,,,,,1000 ml,45,,,,,,136.webp,1
 69,Abre Caminos,,Shampoo,,,,,1000 ml,80,,,,,,69.webp,1
 70,Almendras,,Shampoo,,,,,1000 ml,80,,,,,,70.webp,1
 71,Aloe Vera,,Shampoo,,,,,1000 ml,80,,,,,,71.webp,1
@@ -137,7 +86,6 @@
 85,Coco,,Shampoo,,,,,1000 ml,80,,,,,,85.webp,1
 86,Coco con miel,,Shampoo,,,,,1000 ml,80,,,,,,86.webp,1
 87,"Elixir Anticaída (Cebolla, Gengibre, Sábila y Romero)",,Shampoo,,,,,1000 ml,80,,,,,,87.webp,1
-87,Elixir Antiedad (Nogal y Orégano),,Shampoo,,,,,1000 ml,80,,,,,,87.webp,1
 89,Frutos rojos,,Shampoo,,,,,1000 ml,80,,,,,,89.webp,1
 90,"gengibre con limón, cúrcuma y canela",,Shampoo,,,,,1000 ml,80,,,,,,90.webp,1
 91,"gengibre con naranja, cúrcuma y canela",,Shampoo,,,,,1000 ml,80,,,,,,91.webp,1
@@ -149,35 +97,120 @@
 97,Miel Canela,,Shampoo,,,,,1000 ml,80,,,,,,97.webp,1
 98,Miel con Romero,,Shampoo,,,,,1000 ml,80,,,,,,98.webp,1
 99,Romero,,Shampoo,,,,,1000 ml,80,,,,,,99.webp,1
+100,Romero y Árnica,,Shampoo,,,,,1000 ml,10,,,,,,100.webp,1
 101,Romero Canela,,Shampoo,,,,,1000 ml,80,,,,,,101.webp,1
 102,Romero Keratina,,Shampoo,,,,,1000 ml,80,,,,,,102.webp,1
-100,Romero y Árnica,,Shampoo,,,,,1000 ml,10,,,,,,100.webp,1
 103,Té verde y Menta,,Shampoo,,,,,1000 ml,80,,,,,,103.webp,1
 104,Vainilla,,Shampoo,,,,,1000 ml,80,,,,,,104.webp,1
-182,Corazón blanco,,Amor y amistad,,,,,20  gr,12,,,,,,182.webp,1
-183,Corazón diamante,,Amor y amistad,,,,,20  gr,8,,,,,,183.webp,1
-186,Corazón frases,,Amor y amistad,,,,,20  gr,22,,,,,,186.webp,1
-100,Corazón Frutos Rojos,,Amor y amistad,,,,,20  gr,10,,,,,,100.webp,1
-222,Osito de coco,,Amor y amistad,,,,,20  gr,15,,,,,,222.webp,1
-234,Rosa con tallo,,Amor y amistad,,,,,20  gr,35,,,,,,234.webp,1
+105,Abre caminos,,Jabón corporal,,,,,1000 ml,45,,,,,,105.webp,1
+106,Almendras,,Jabón corporal,,,,,1000 ml,45,,,,,,106.webp,1
+107,Aloe Vera,,Jabón corporal,,,,,1000 ml,45,,,,,,107.webp,1
+108,Arandanos,,Jabón corporal,,,,,1000 ml,45,,,,,,108.webp,1
+109,Árnica,,Jabón corporal,,,,,1000 ml,45,,,,,,109.webp,1
+110,Arroz  ,,Jabón corporal,,,,,1000 ml,45,,,,,,110.webp,1
+111,Arroz  Miel,,Jabón corporal,,,,,1000 ml,45,,,,,,111.webp,1
+112,Avena para bebé,,Jabón corporal,,,,,1000 ml,45,,,,,,112.webp,1
+113,Avena miel,,Jabón corporal,,,,,1000 ml,45,,,,,,113.webp,1
+114,Café,,Jabón corporal,,,,,1000 ml,45,,,,,,114.webp,1
+115,Cítricos,,Jabón corporal,,,,,1000 ml,45,,,,,,115.webp,1
+116,Chocolate,,Jabón corporal,,,,,1000 ml,45,,,,,,116.webp,1
+117,Coco,,Jabón corporal,,,,,1000 ml,45,,,,,,117.webp,1
+118,Coco con miel,,Jabón corporal,,,,,1000 ml,45,,,,,,118.webp,1
+119,Frutos rojos,,Jabón corporal,,,,,1000 ml,45,,,,,,119.webp,1
+120,"gengibre con limón, cúrcuma y canela",,Jabón corporal,,,,,1000 ml,45,,,,,,120.webp,1
+121,"gengibre con naranja, cúrcuma y canela",,Jabón corporal,,,,,1000 gr,45,,,,,,121.webp,1
+122,Lavanda,,Jabón corporal,,,,,1000 ml,45,,,,,,122.webp,1
+123,Limón,,Jabón corporal,,,,,1000 ml,45,,,,,,123.webp,1
+124,Manzanilla,,Jabón corporal,,,,,1000 ml,45,,,,,,124.webp,1
+125,Menta,,Jabón corporal,,,,,1000 ml,45,,,,,,125.webp,1
+126,Eucalipto con Bugambilia y Menta,,Jabón corporal,,,,,1000 ml,20,,,,,,126.webp,1
+127,Miel,,Jabón corporal,,,,,1000 ml,45,,,,,,127.webp,1
+128,Miel Canela,,Jabón corporal,,,,,1000 ml,45,,,,,,128.webp,1
+129,Neem con caléndula,,Jabón corporal,,,,,1000 ml,45,,,,,,129.webp,1
+130,Rosa de Castilla,,Jabón corporal,,,,,1000 ml,45,,,,,,130.webp,1
+131,Romero,,Jabón corporal,,,,,1000 ml,45,,,,,,131.webp,1
+132,Té verde y Menta,,Jabón corporal,,,,,1000 ml,45,,,,,,132.webp,1
+133,Toronja y romero,,Jabón corporal,,,,,1000 ml,45,,,,,,133.webp,1
+134,Vainilla,,Jabón corporal,,,,,1000 ml,45,,,,,,134.webp,1
+135,Vino tinto y rosas,,Jabón corporal,,,,,1000 ml,45,,,,,,135.webp,1
+136,Vitamina E,,Jabón corporal,,,,,1000 ml,45,,,,,,136.webp,1
+137,Almendras,,Jabón líquido,,,,,1000 ml,45,,,,,,137.webp,1
+138,Aloe vera,,Jabón líquido,,,,,1000 ml,45,,,,,,138.webp,1
+139,Árnica,,Jabón líquido,,,,,1000 ml,45,,,,,,139.webp,1
+140,Avena,,Jabón líquido,,,,,1000 ml,45,,,,,,140.webp,1
+141,Avena Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,141.webp,1
+142,Canela Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,142.webp,1
+143,Chocolate,,Jabón líquido,,,,,1000 ml,45,,,,,,143.webp,1
+144,Coco,,Jabón líquido,,,,,1000 ml,45,,,,,,144.webp,1
+145,Coco con miel,,Jabón líquido,,,,,1000 ml,45,,,,,,145.webp,1
+146,Frutos rojos,,Jabón líquido,,,,,1000 ml,45,,,,,,146.webp,1
+147,Limón,,Jabón líquido,,,,,1000 ml,45,,,,,,147.webp,1
+148,Manzanilla,,Jabón líquido,,,,,1000 ml,45,,,,,,148.webp,1
+149,Miel,,Jabón líquido,,,,,1000 ml,45,,,,,,149.webp,1
+151,Rosa de Castilla,,Jabón líquido,,,,,1000 ml,45,,,,,,151.webp,1
+152,Romero,,Jabón líquido,,,,,1000 ml,45,,,,,,152.webp,1
+153,Té verde y Menta,,Jabón líquido,,,,,1000 ml,45,,,,,,153.webp,1
+154,Vainilla,,Jabón líquido,,,,,1000 ml,45,,,,,,154.webp,1
+155,Vitamina E,,Jabón líquido,,,,,1000 ml,45,,,,,,155.webp,1
+156,Angel,,Decorativos,,,,,75 gr,18,,,,,,156.webp,1
+157,Animalitos,,Decorativos,,,,,30 gr,10,,,,,,157.webp,1
 158,Barrel Coco,,Halloween,,,,,100 gr,20,,,,,,158.webp,1
+162,Borregos,,Navidad,,,,,140 gr,40,,,,,,162.webp,1
+163,Bota San Claus,,Navidad,,,,,50 gr,15,,,,,,163.webp,1
 164,Brujita Flor de Azhar,,Halloween,,,,,70 gr,15,,,,,,164.webp,1
+165,Caballito,,Decorativos,,,,,20 gr,5,,,,,,165.webp,1
 166,Calabacita 1 Cítricos,,Halloween,,,,,70 gr,15,,,,,,166.webp,1
-169,Calabacita 2 Cítricos,,Halloween,,,,,70 gr,15,,,,,,169.webp,1
 167,Calabaza 3 Cítricos,,Halloween,,,,,100 gr,20,,,,,,167.webp,1
 168,Calabaza 4 Cítricos,,Halloween,,,,,100 gr,20,,,,,,168.webp,1
+169,Calabacita 2 Cítricos,,Halloween,,,,,70 gr,15,,,,,,169.webp,1
 171,Calaverita 1 Flor Azhar,,Halloween,,,,,20 gr,5,,,,,,171.webp,1
-172,Calaverita 2 Coco,,Halloween,,,,,50 gr,10,,,,,,172.webp,1
-172,Calaverita 2 Flor de Azhar,,Halloween,,,,,50 gr,10,,,,,,172.webp,1
+172,Calaverita 2 Coco o Flor de azhar,,Halloween,,,,,50 gr,10,,,,,,172.webp,1
+173,Calaverita mexicana,,Halloween,,,,,60 gr,35,,,,,,173.webp,1
+175,Capibara,,Decorativos,,,,,90 gr,19,,,,,,175.webp,1
+178,Cerebro,,Halloween,,,,,,10,,,,,,178.webp,1
+180,Conejo de pascua,,Pascua,,,,,,25,,,,,,180.webp,1
+182,Corazón blanco,,Amor y amistad,,,,,20  gr,12,,,,,,182.webp,1
+183,Corazón diamante,,Amor y amistad,,,,,20  gr,8,,,,,,183.webp,1
+184,Corazón Encapsulado o Incrustación,,San valentín,,,,,,12,,,,,,184.webp,1
+185,Corazón escalera,,San valentín,,,,,,10,,,,,,185.webp,1
+186,Corazón frases,,Amor y amistad,,,,,20  gr,22,,,,,,186.webp,1
+187,Corona navideña,,Navidad,,,,,55 gr,15,,,,,,187.webp,1
 188,Craneo Flor de Azhar,,Halloween,,,,,100 gr,20,,,,,,188.webp,1
+189,Cruz,,Decorativos,,,,,45 gr,15,,,,,,189.webp,1
+190,Cruz paloma,,Decorativos,,,,,45 gr,15,,,,,,190.webp,1
+191,Cuadrados grandes con incrustación,,Decorativos,,,,,90 gr,22,,,,,,191.webp,1
+197,Estrella,,Navidad,,,,,20 gr,5,,,,,,197.webp,1
+198,Estrella,,Navidad,,,,,55gr,15,,,,,,198.webp,1
 200,Fantasma Coco,,Halloween,,,,,70 gr,15,,,,,,200.webp,1
+201,Flor Chica,,Pascua,,,,,20 gr,5,,,,,,201.webp,1
 203,Gato Flor de Azhar,,Halloween,,,,,100 gr,20,,,,,,203.webp,1
+204,Huella perrito,,Decorativos,,,,,,10,,,,,,204.webp,1
+205,Huevo de pascua,,Pascua,,,,,,15,,,,,,205.webp,1
 206,Jack Skellington Coco,,Halloween,,,,,100 gr,20,,,,,,206.webp,1
+207,Lápidas,,Halloween,,,,,100 gr,22,,,,,,207.webp,1
 210,Lock Frutos rojos,,Halloween,,,,,100 gr,20,,,,,,210.webp,1
+212,Manzanas,,Decorativos,,,,,,15,,,,,,212.webp,1
+213,Margarita grande,,Decorativos,,,,,,17,,,,,,213.webp,1
+215,Mariposa grande,,Decorativos,,,,,,15,,,,,,215.webp,1
 216,Momia Coco,,Halloween,,,,,100 gr,20,,,,,,216.webp,1
+217,Muñequito de chocolate,,Navidad,,,,,50 gr,15,,,,,,217.webp,1
+218,Muñeco de nieve,,Navidad,,,,,50 gr,15,,,,,,218.webp,1
+219,Muñeco de nieve decorado,,Navidad,,,,,65 gr,20,,,,,,219.webp,1
 220,Murciélago Flor de Azhar,,Halloween,,,,,100 gr,20,,,,,,220.webp,1
+221,Nochebuena,,Navidad,,,,,50 gr,15,,,,,,221.webp,1
+222,Osito de coco,,Amor y amistad,,,,,20  gr,15,,,,,,222.webp,1
 223,Oogie Boogie Bergamota,,Halloween,,,,,100 gr,20,,,,,,223.webp,1
+225,Patito,,Decorativos,,,,,30 gr,13,,,,,,225.webp,1
+226,Piecito,,Decorativos,,,,,40 gr,10,,,,,,226.webp,1
+227,Pino navideño con esferas,,Navidad,,,,,50 gr,15,,,,,,227.webp,1
+228,Pino navideño con estrella,,Navidad,,,,,55gr,15,,,,,,228.webp,1
+229,Piña,,Decorativos,,,,,70 gr,18,,,,,,229.webp,1
+230,Pollito en cascarón,,Decorativos,,,,,,20,,,,,,230.webp,1
+231,Querubín,,Decorativos,,,,,45 gr,10,,,,,,231.webp,1
+233,Rosa,,San valentín,,,,,75 gr,15,,,,,,233.webp,1
+234,Rosa con tallo,,Amor y amistad,,,,,20  gr,35,,,,,,234.webp,1
 235,Sally Menta,,Halloween,,,,,100 gr,20,,,,,,235.webp,1
 237,Shock Manzana Canela,,Halloween,,,,,100 gr,20,,,,,,237.webp,1
+238,Santa Claus ,,Navidad,,,,,55 gr,15,,,,,,238.webp,1
 240,Sombrero Lavanda,,Halloween,,,,,100 gr,20,,,,,,240.webp,1
-207,Lápidas,,Halloween,,,,,100 gr,22,,,,,,207.webp,1
+244,Zanahoria,,Decorativos,,,,,,10,,,,,,244.webp,1
