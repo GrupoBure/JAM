@@ -38,7 +38,7 @@
       top: 35px;
       left: 40px;
       z-index: 50;
-      background: #47ac72;           /* Rojo mexicano vibrante */
+      background: #47ac72;
       color: white;
       padding: 12px 28px;
       font-size: 1.1rem;
@@ -58,11 +58,6 @@
       background: #080808;
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn-catalogo::before {
-      content: "";
-      font-size: 1.3rem;
     }
 
     /* ===== CARRUSEL DE VIDEOS ===== */
@@ -107,7 +102,7 @@
       display: none !important;
     }
 
-    /* Flechas */
+    /* Flechas del carrusel */
     .arrow {
       position: absolute;
       top: 50%;
@@ -132,7 +127,7 @@
     .left  { left: 25px; }
     .right { right: 25px; }
 
-    /* ===== GALERÍA DE FOTOS ===== */
+    /* ===== GALERÍA ===== */
     .gallery {
       padding: 40px 20px;
       max-width: 1200px;
@@ -140,10 +135,43 @@
     }
     .gallery h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-size: 2.4rem;
       color: #444;
     }
+
+    /* Filtros por categoría */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 35px 0 40px;
+    }
+
+    .filter-btn {
+      background: #47ac72;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .filter-btn:hover {
+      background: #3a8f5e;
+      transform: translateY(-3px);
+    }
+
+    .filter-btn.active {
+      background: #080808;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -217,6 +245,14 @@
         padding: 10px 22px;
         font-size: 1rem;
       }
+
+      .filters {
+        gap: 8px;
+      }
+      .filter-btn {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -239,9 +275,25 @@
     <div class="arrow right" id="next">›</div>
   </div>
 
-  <!-- GALERÍA DE FOTOS -->
+  <!-- GALERÍA DE FOTOS CON CATEGORÍAS -->
   <div class="gallery">
     <h2>Galería de Productos</h2>
+    
+    <!-- Filtros -->
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="glicerina100">Jabón Glicerina 100g</button>
+      <button class="filter-btn" data-filter="liquido-corporal">Jabón Líquido Corporal</button>
+      <button class="filter-btn" data-filter="liquido-manos">Jabón Líquido Manos</button>
+      <button class="filter-btn" data-filter="shampoo">Shampoo para el Cabello</button>
+      <button class="filter-btn" data-filter="decorativo">Jabón Decorativo</button>
+      <button class="filter-btn" data-filter="crema-corporal">Crema Corporal</button>
+      <button class="filter-btn" data-filter="esencias">Esencias</button>
+      <button class="filter-btn" data-filter="base-glicerina">Jabón Base Glicerina</button>
+      <button class="filter-btn" data-filter="beneficios">Beneficios</button>
+      <button class="filter-btn" data-filter="varios">Productos Varios</button>
+    </div>
+
     <div class="grid" id="photoGrid"></div>
   </div>
 
@@ -289,23 +341,103 @@
 
     loadVideo(0);
 
-    // ================== GALERÍA DE FOTOS ==================
+    // ================== GALERÍA DE FOTOS POR CATEGORÍA ==================
+
     const photos = [
-      "Fot1 (1).webp", "Fot1 (2).webp", "Fot1 (3).webp", "Fot1 (4).webp",
-      "Fot1 (5).webp", "Fot1 (6).webp", "Fot1 (7).webp", "Fot1 (8).webp",
-      "Fot1 (9).webp","Fot1 (10).webp","Fot1 (11).webp","Fot1 (12).webp","Fot1 (13).webp","Fot1 (14).webp","Fot1 (15).webp",
-      "Fot1 (16).webp","Fot1 (17).webp","Fot1 (18).webp","Fot1 (19).webp","Fot1 (20).webp","Fot1 (21).webp","Fot1 (22).webp",
-      "Fot1 (23).webp","Fot1 (24).webp","Fot1 (25).webp","Fot1 (26).webp","Fot1 (27).webp","Fot1 (28).webp","Fot1 (29).webp",
-      "Fot1 (30).webp","Fot1 (31).webp","Fot1 (32).webp","Fot1 (33).webp","Fot1 (34).webp","Fot1 (35).webp","Fot1 (36).webp",
-      "Fot1 (37).webp","Fot1 (38).webp","Fot1 (39).webp","Fot1 (40).webp","Fot1 (41).webp","Fot1 (42).webp","Fot1 (43).webp",
-      "Fot1 (44).webp","Fot1 (45).webp","Fot1 (46).webp","Fot1 (47).webp","Fot1 (48).webp","Fot1 (49).webp","Fot1 (50).webp",
-      "Fot1 (51).webp","Fot1 (52).webp","Fot1 (53).webp","Fot1 (54).webp","Fot1 (55).webp","Fot1 (56).webp","Fot1 (57).webp",
-      "Fot1 (58).webp","Fot1 (59).webp","Fot1 (60).webp","Fot1 (61).webp","Fot1 (62).webp","Fot1 (63).webp","Fot1 (64).webp",
-      "Fot1 (65).webp","Fot1 (66).webp","Fot1 (67).webp","Fot1 (68).webp","Fot1 (69).webp","Fot1 (70).webp","Fot1 (71).webp",
-      "Fot1 (72).webp","Fot1 (73).webp","Fot1 (74).webp","Fot1 (75).webp","Fot1 (76).webp","Fot1 (77).webp","Fot1 (78).webp",
-      "Fot1 (79).webp","Fot1 (80).webp","Fot1 (81).webp","Fot1 (82).webp","Fot1 (83).webp","Fot1 (84).webp","Fot1 (85).webp",
-      "Fot1 (86).webp","Fot1 (87).webp","Fot1 (88).webp","Fot1 (89).webp","Fot1 (90).webp","Fot1 (91).webp","Fot1 (92).webp",
-      "Fot1 (93).webp"
+{src:"Fot1 (1).webp",category:"glicerina100",alt:"Foto 1"},
+{src:"Fot1 (2).webp",category:"Beneficios",alt:"Foto 2"},
+{src:"Fot1 (3).webp",category:"glicerina100",alt:"Foto 3"},
+{src:"Fot1 (4).webp",category:"decorativo",alt:"Foto 4"},
+{src:"Fot1 (5).webp",category:"glicerina100",alt:"Foto 5"},
+{src:"Fot1 (6).webp",category:"base-glicerina",alt:"Foto 6"},
+{src:"Fot1 (7).webp",category:"decorativo",alt:"Foto 7"},
+{src:"Fot1 (8).webp",category:"glicerina100",alt:"Foto 8"},
+{src:"Fot1 (9).webp",category:"glicerina100",alt:"Foto 9"},
+{src:"Fot1 (10).webp",category:"decorativo",alt:"Foto 10"},
+{src:"Fot1 (11).webp",category:"shampoo",alt:"Foto 11"},
+{src:"Fot1 (12).webp",category:"decorativo",alt:"Foto 12"},
+{src:"Fot1 (13).webp",category:"decorativo",alt:"Foto 13"},
+{src:"Fot1 (14).webp",category:"glicerina100",alt:"Foto 14"},
+{src:"Fot1 (15).webp",category:"varios",alt:"Foto 15"},
+{src:"Fot1 (16).webp",category:"decorativo",alt:"Foto 16"},
+{src:"Fot1 (17).webp",category:"decorativo",alt:"Foto 17"},
+{src:"Fot1 (18).webp",category:"glicerina100",alt:"Foto 18"},
+{src:"Fot1 (19).webp",category:"decorativo",alt:"Foto 19"},
+{src:"Fot1 (20).webp",category:"glicerina100",alt:"Foto 20"},
+{src:"Fot1 (21).webp",category:"glicerina100",alt:"Foto 21"},
+{src:"Fot1 (22).webp",category:"crema-corporal",alt:"Foto 22"},
+{src:"Fot1 (23).webp",category:"decorativo",alt:"Foto 23"},
+{src:"Fot1 (24).webp",category:"varios",alt:"Foto 24"},
+{src:"Fot1 (25).webp",category:"decorativo",alt:"Foto 25"},
+{src:"Fot1 (26).webp",category:"decorativo",alt:"Foto 26"},
+{src:"Fot1 (27).webp",category:"crema-corporal",alt:"Foto 27"},
+{src:"Fot1 (28).webp",category:"glicerina100",alt:"Foto 28"},
+{src:"Fot1 (29).webp",category:"shampoo",alt:"Foto 29"},
+{src:"Fot1 (30).webp",category:"varios",alt:"Foto 30"},
+{src:"Fot1 (31).webp",category:"decorativo",alt:"Foto 31"},
+{src:"Fot1 (32).webp",category:"glicerina100",alt:"Foto 32"},
+{src:"Fot1 (33).webp",category:"varios",alt:"Foto 33"},
+{src:"Fot1 (34).webp",category:"glicerina100",alt:"Foto 34"},
+{src:"Fot1 (35).webp",category:"glicerina100",alt:"Foto 35"},
+{src:"Fot1 (36).webp",category:"decorativo",alt:"Foto 36"},
+{src:"Fot1 (37).webp",category:"decorativo",alt:"Foto 37"},
+{src:"Fot1 (38).webp",category:"glicerina100",alt:"Foto 38"},
+{src:"Fot1 (39).webp",category:"glicerina100",alt:"Foto 39"},
+{src:"Fot1 (40).webp",category:"decorativo",alt:"Foto 40"},
+{src:"Fot1 (41).webp",category:"crema-corporal",alt:"Foto 41"},
+{src:"Fot1 (42).webp",category:"liquido-corporal",alt:"Foto 42"},
+{src:"Fot1 (43).webp",category:"decorativo",alt:"Foto 43"},
+{src:"Fot1 (44).webp",category:"decorativo",alt:"Foto 44"},
+{src:"Fot1 (45).webp",category:"decorativo",alt:"Foto 45"},
+{src:"Fot1 (46).webp",category:"decorativo",alt:"Foto 46"},
+{src:"Fot1 (47).webp",category:"decorativo",alt:"Foto 47"},
+{src:"Fot1 (48).webp",category:"decorativo",alt:"Foto 48"},
+{src:"Fot1 (49).webp",category:"crema-corporal",alt:"Foto 49"},
+{src:"Fot1 (50).webp",category:"decorativo",alt:"Foto 50"},
+{src:"Fot1 (51).webp",category:"decorativo",alt:"Foto 51"},
+{src:"Fot1 (52).webp",category:"glicerina100",alt:"Foto 52"},
+{src:"Fot1 (53).webp",category:"glicerina100",alt:"Foto 53"},
+{src:"Fot1 (54).webp",category:"decorativo",alt:"Foto 54"},
+{src:"Fot1 (55).webp",category:"decorativo",alt:"Foto 55"},
+{src:"Fot1 (56).webp",category:"decorativo",alt:"Foto 56"},
+{src:"Fot1 (57).webp",category:"decorativo",alt:"Foto 57"},
+{src:"Fot1 (58).webp",category:"glicerina100",alt:"Foto 58"},
+{src:"Fot1 (59).webp",category:"crema-corporal",alt:"Foto 59"},
+{src:"Fot1 (60).webp",category:"shampoo",alt:"Foto 60"},
+{src:"Fot1 (61).webp",category:"Beneficios",alt:"Foto 61"},
+{src:"Fot1 (62).webp",category:"decorativo",alt:"Foto 62"},
+{src:"Fot1 (63).webp",category:"glicerina100",alt:"Foto 63"},
+{src:"Fot1 (64).webp",category:"decorativo",alt:"Foto 64"},
+{src:"Fot1 (65).webp",category:"glicerina100",alt:"Foto 65"},
+{src:"Fot1 (66).webp",category:"decorativo",alt:"Foto 66"},
+{src:"Fot1 (67).webp",category:"decorativo",alt:"Foto 67"},
+{src:"Fot1 (68).webp",category:"Beneficios",alt:"Foto 68"},
+{src:"Fot1 (69).webp",category:"Beneficios",alt:"Foto 69"},
+{src:"Fot1 (70).webp",category:"Beneficios",alt:"Foto 70"},
+{src:"Fot1 (71).webp",category:"Beneficios",alt:"Foto 71"},
+{src:"Fot1 (72).webp",category:"Beneficios",alt:"Foto 72"},
+{src:"Fot1 (73).webp",category:"Beneficios",alt:"Foto 73"},
+{src:"Fot1 (74).webp",category:"Beneficios",alt:"Foto 74"},
+{src:"Fot1 (75).webp",category:"Beneficios",alt:"Foto 75"},
+{src:"Fot1 (76).webp",category:"Beneficios",alt:"Foto 76"},
+{src:"Fot1 (77).webp",category:"Beneficios",alt:"Foto 77"},
+{src:"Fot1 (78).webp",category:"Beneficios",alt:"Foto 78"},
+{src:"Fot1 (79).webp",category:"Beneficios",alt:"Foto 79"},
+{src:"Fot1 (80).webp",category:"Beneficios",alt:"Foto 80"},
+{src:"Fot1 (81).webp",category:"Beneficios",alt:"Foto 81"},
+{src:"Fot1 (82).webp",category:"Beneficios",alt:"Foto 82"},
+{src:"Fot1 (83).webp",category:"Beneficios",alt:"Foto 83"},
+{src:"Fot1 (84).webp",category:"Beneficios",alt:"Foto 84"},
+{src:"Fot1 (85).webp",category:"Beneficios",alt:"Foto 85"},
+{src:"Fot1 (86).webp",category:"decorativo",alt:"Foto 86"},
+{src:"Fot1 (87).webp",category:"decorativo",alt:"Foto 87"},
+{src:"Fot1 (88).webp",category:"decorativo",alt:"Foto 88"},
+{src:"Fot1 (89).webp",category:"decorativo",alt:"Foto 89"},
+{src:"Fot1 (90).webp",category:"glicerina100",alt:"Foto 90"},
+{src:"Fot1 (91).webp",category:"decorativo",alt:"Foto 91"},
+{src:"Fot1 (92).webp",category:"decorativo",alt:"Foto 92"},
+{src:"Fot1 (93).webp",category:"decorativo",alt:"Foto 93"}
+
     ];
 
     const grid = document.getElementById('photoGrid');
@@ -313,18 +445,41 @@
     const modalImage = document.getElementById('modalImage');
     const closeModal = document.getElementById('closeModal');
 
-    photos.forEach(photo => {
-      const img = document.createElement('img');
-      img.src = `./content/${photo}`;
-      img.alt = photo;
-      img.addEventListener('click', () => {
-        modalImage.src = `./content/${photo}`;
-        modal.style.display = 'flex';
+    // Función para renderizar fotos según filtro
+    function renderPhotos(filter = 'all') {
+      grid.innerHTML = '';
+
+      const filteredPhotos = filter === 'all' 
+        ? photos 
+        : photos.filter(photo => photo.category === filter);
+
+      filteredPhotos.forEach(photo => {
+        const img = document.createElement('img');
+        img.src = `./content/${photo.src}`;
+        img.alt = photo.alt;
+        img.addEventListener('click', () => {
+          modalImage.src = `./content/${photo.src}`;
+          modal.style.display = 'flex';
+        });
+        grid.appendChild(img);
       });
-      grid.appendChild(img);
+    }
+
+    // Manejar filtros
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+        renderPhotos(filterValue);
+      });
     });
 
-    // Cerrar modal
+    // Cargar todas las fotos al inicio
+    renderPhotos('all');
+
+    // Modal
     closeModal.addEventListener('click', () => modal.style.display = 'none');
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.style.display = 'none';
