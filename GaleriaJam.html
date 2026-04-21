@@ -24,19 +24,52 @@
     /* ===== LOGO ===== */
     .logo {
       position: absolute;
-      top: -65px;        /* más abajo */
-      right: 100px;      /* más a la izquierda (antes estaba en 30px) */
+      top: -65px;
+      right: 100px;
       z-index: 50;
       max-width: 250px;
       height: auto;
       filter: drop-shadow(0 8px 16px rgba(0,0,0,0.55));
     }
 
+    /* ===== BOTÓN CATÁLOGO ===== */
+    .btn-catalogo {
+      position: absolute;
+      top: 35px;
+      left: 40px;
+      z-index: 50;
+      background: #d32f2f;           /* Rojo mexicano vibrante */
+      color: white;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(211, 47, 47, 0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-catalogo:hover {
+      background: #b71c1c;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(211, 47, 47, 0.5);
+    }
+
+    .btn-catalogo::before {
+      content: "🛒";
+      font-size: 1.3rem;
+    }
+
     /* ===== CARRUSEL DE VIDEOS ===== */
     .carousel {
       position: relative;
       max-width: 880px;
-      margin: 120px auto 40px; /* aumentado un poco por el logo más abajo */
+      margin: 120px auto 40px;
       padding: 15px;
       background: transparent;
     }
@@ -64,9 +97,7 @@
     .video-container video::-webkit-media-controls {
       display: none !important;
     }
-    .video-container video::-webkit-media-controls-panel {
-      display: none !important;
-    }
+    .video-container video::-webkit-media-controls-panel,
     .video-container video::-webkit-media-controls-play-button,
     .video-container video::-webkit-media-controls-volume-slider,
     .video-container video::-webkit-media-controls-mute-button,
@@ -173,10 +204,18 @@
       }
       .left { left: 15px; }
       .right { right: 15px; }
+      
       .logo {
-        max-width: 140px;
+        max-width: 180px;
+        top: -40px;
+        right: 30px;
+      }
+      
+      .btn-catalogo {
         top: 25px;
-        right: 25px;
+        left: 20px;
+        padding: 10px 22px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -185,6 +224,11 @@
 
   <!-- LOGO -->
   <img src="./content/logo.png" alt="Logo JAM" class="logo">
+
+  <!-- BOTÓN CATÁLOGO -->
+  <a href="catalogoTest.html" class="btn-catalogo">
+    Catálogo
+  </a>
 
   <!-- CARRUSEL DE VIDEOS -->
   <div class="carousel">
